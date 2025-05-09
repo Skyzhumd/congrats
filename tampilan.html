@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Ucapan Selamat Hari Guru</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="balloon-container" aria-hidden="true">
+    <!-- More balloons with varying sizes, colors, positions, durations & delays -->
+    <div class="balloon" style="width: 40px; height: 50px; left: 5vw; animation-duration: 14s; animation-delay: 0s; background: #ff6b6b;"></div>
+    <div class="balloon" style="width: 30px; height: 40px; left: 12vw; animation-duration: 12s; animation-delay: 2s; background: #feca57;"></div>
+    <div class="balloon" style="width: 50px; height: 60px; left: 18vw; animation-duration: 16s; animation-delay: 4s; background: #48dbfb;"></div>
+    <div class="balloon" style="width: 35px; height: 45px; left: 26vw; animation-duration: 13s; animation-delay: 3s; background: #1dd1a1;"></div>
+    <div class="balloon" style="width: 45px; height: 55px; left: 32vw; animation-duration: 15s; animation-delay: 1s; background: #f368e0;"></div>
+    <div class="balloon" style="width: 30px; height: 40px; left: 38vw; animation-duration: 14s; animation-delay: 5s; background: #ff9f43;"></div>
+    <div class="balloon" style="width: 40px; height: 50px; left: 44vw; animation-duration: 13s; animation-delay: 0.5s; background: #ff6b6b;"></div>
+    <div class="balloon" style="width: 30px; height: 40px; left: 50vw; animation-duration: 11s; animation-delay: 2.5s; background: #feca57;"></div>
+    <div class="balloon" style="width: 50px; height: 60px; left: 56vw; animation-duration: 17s; animation-delay: 4.5s; background: #48dbfb;"></div>
+    <div class="balloon" style="width: 35px; height: 45px; left: 62vw; animation-duration: 12s; animation-delay: 3.2s; background: #1dd1a1;"></div>
+    <div class="balloon" style="width: 45px; height: 55px; left: 68vw; animation-duration: 16s; animation-delay: 1.3s; background: #f368e0;"></div>
+    <div class="balloon" style="width: 30px; height: 40px; left: 75vw; animation-duration: 15s; animation-delay: 5.3s; background: #ff9f43;"></div>
+    <div class="balloon" style="width: 45px; height: 55px; left: 80vw; animation-duration: 13s; animation-delay: 2.7s; background: #48dbfb;"></div>
+    <div class="balloon" style="width: 50px; height: 60px; left: 88vw; animation-duration: 14s; animation-delay: 4.7s; background: #ff6b6b;"></div>
+    <div class="balloon" style="width: 35px; height: 45px; left: 93vw; animation-duration: 12s; animation-delay: 3.1s; background: #feca57;"></div>
+  </div>
+  <div class="container">
+    <div class="intro">
+      <h2>Pengenalan Diri</h2>
+      <p><strong>Nama:</strong> Nama Kamu</p>
+      <p><strong>Kelas:</strong> X IPA 1</p>
+      <p><strong>Jurusan:</strong> IPA</p>
+    </div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Raden_Kartini2.png" alt="Foto RA Kartini" />
+    <h1>Selamat Hari Guru</h1>
+    <p class="thanks" id="typing-text"></p>
+  </div>
+  <script>
+    const text = `Terima kasih yang tulus kami haturkan kepada seluruh guru yang telah berdedikasi tanpa lelah dalam mendidik dan membimbing generasi penerus bangsa. 
+Jasamu adalah cahaya yang menerangi jalan kita, membentuk karakter dan memberikan inspirasi untuk terus belajar dan maju. 
+Semoga segala kebaikan dan pengorbananmu mendapatkan balasan yang terbaik, dan Hari Guru ini menjadi momentum untuk mengenang serta menghargai jasa muliamu.`;
+
+    const typingSpeed = 40; // milliseconds per character
+    let i = 0;
+    const typingTextElement = document.getElementById('typing-text');
+
+    function typeWriter() {
+      if (i < text.length) {
+        typingTextElement.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, typingSpeed);
+      }
+    }
+
+    window.onload = () => {
+      typeWriter();
+    };
+  </script>
+</body>
+</html>
